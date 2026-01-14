@@ -6,7 +6,7 @@
     <title>Dace | Join the Web</title>
     <style>
         :root {
-            --accent: #ff0000; /* Spidey Red */
+            --accent: #ff0000; 
             --bg: #0b0b0d;
             --card: #18181b;
             --text: #ffffff;
@@ -25,7 +25,7 @@
             min-height: 100vh;
         }
 
-        /* --- LANDING PAGE SECTION --- */
+        /* LANDING PAGE */
         .container {
             background: var(--card);
             width: 100%;
@@ -90,7 +90,7 @@
         .links a { color: #efeff1; text-decoration: none; font-size: 0.85rem; font-weight: 600; }
         .links a:hover { color: var(--accent); }
 
-        /* --- EMAIL PREVIEW SECTION (The Join) --- */
+        /* EMAIL PREVIEW */
         .preview-label {
             color: var(--subtext);
             font-size: 0.9rem;
@@ -106,11 +106,11 @@
             border-radius: 15px;
             overflow: hidden;
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            color: #333; /* Reset text color for email content */
+            color: #333;
         }
         .hero-img { width: 100%; height: 250px; object-fit: cover; }
         .content { padding: 30px; text-align: center; }
-        .content h2 { color: var(--accent); font-size: 24px; margin-top: 0; }
+        .content h2 { color: var(--accent); font-size: 24px; margin: 0 0 15px 0; }
         
         .platform-link {
             display: block;
@@ -122,7 +122,6 @@
             text-decoration: none;
             font-weight: bold;
             border: 1px solid #eee;
-            transition: 0.2s;
         }
         .platform-link:hover { background: var(--accent); color: #fff; }
         .footer { padding: 15px; font-size: 11px; color: #999; text-align: center; background: #f9f9f9; }
@@ -151,27 +150,20 @@
     
     <div class="email-card">
         <img src="your-photo-2.jpg" class="hero-img" alt="Welcome Dace">
-        
         <div class="content">
             <h2>Thanks for the sub! 🤟</h2>
-            <p>Yo! I'm <strong>Dace</strong>. Thanks for joining. You're officially part of the inner circle.</p>
-            
-            <p style="font-size: 0.9rem;">Expect weekly schedules, setup photos, and early access to drops.</p>
-            
+            <p>Yo! I'm <strong>Dace</strong>. Thanks for joining the inner circle.</p>
+            <p style="font-size: 0.9rem;">Expect weekly schedules and setup photos.</p>
             <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
-            
             <a href="https://twitch.tv/daceteam" class="platform-link">🟣 Live on Twitch</a>
             <a href="https://youtube.com/@daceteam" class="platform-link">🔴 YouTube Highlights</a>
             <a href="https://discord.gg/BgmQFQmVMR" class="platform-link">💬 Join the Discord</a>
-            <a href="https://www.instagram.com/daceteam" class="platform-link">📸 Insta BTS</a>
-            
             <p style="margin-top: 20px; font-size: 0.8rem; color: #666;">
                 Contact: <strong>abegwhocookbusiness@gmail.com</strong>
             </p>
         </div>
-        
         <div class="footer">
-            &copy; 2026 Dace Streaming. <a href="#" style="color: #999;">Unsubscribe</a>
+            &copy; 2026 Dace Streaming.
         </div>
     </div>
 
