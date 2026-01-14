@@ -29,12 +29,7 @@
             overflow-x: hidden;
         }
 
-        .card-system {
-            width: 100%;
-            max-width: 450px;
-            padding: 20px;
-            position: relative;
-        }
+        .card-system { width: 100%; max-width: 450px; padding: 20px; position: relative; }
 
         .glass-card {
             background: var(--twitch-card);
@@ -47,136 +42,90 @@
         }
 
         #landing-page { opacity: 1; transform: scale(1); }
-        #welcome-page { 
-            display: none; 
-            opacity: 0; 
-            transform: translateY(30px); 
-            border-top: 4px solid var(--twitch-purple);
-        }
+        #welcome-page { display: none; opacity: 0; transform: translateY(30px); border-top: 4px solid var(--twitch-purple); }
 
         .logo-placeholder {
-            width: 80px;
-            height: 80px;
+            width: 80px; height: 80px;
             background: linear-gradient(45deg, var(--twitch-purple), #bf94ff);
-            margin: 0 auto 20px;
-            border-radius: 22px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 900;
-            font-size: 2.2rem;
-            box-shadow: 0 0 25px var(--accent-glow);
+            margin: 0 auto 20px; border-radius: 22px;
+            display: flex; align-items: center; justify-content: center;
+            font-weight: 900; font-size: 2.2rem; box-shadow: 0 0 25px var(--accent-glow);
         }
 
         h1 { font-size: 2.5rem; margin: 0; letter-spacing: -1px; text-transform: uppercase; color: #fff; }
         .tagline { color: var(--text-muted); margin: 12px 0 25px; line-height: 1.5; font-size: 1.05rem; }
 
         input[type="email"] {
-            width: 100%;
-            padding: 18px;
-            background: #000;
-            border: 2px solid #303032;
-            border-radius: 14px;
-            color: #fff;
-            font-size: 1rem;
-            margin-bottom: 16px;
-            box-sizing: border-box;
-            outline: none;
-            transition: 0.3s;
+            width: 100%; padding: 18px; background: #000; border: 2px solid #303032;
+            border-radius: 14px; color: #fff; font-size: 1rem; margin-bottom: 16px;
+            box-sizing: border-box; outline: none; transition: 0.3s;
         }
         input:focus { border-color: var(--twitch-purple); box-shadow: 0 0 12px var(--accent-glow); }
 
         .btn {
-            width: 100%;
-            padding: 18px;
-            background: var(--twitch-purple);
-            color: white;
-            border: none;
-            border-radius: 14px;
-            font-weight: 800;
-            text-transform: uppercase;
-            cursor: pointer;
-            letter-spacing: 1px;
-            transition: 0.3s ease;
-            margin-bottom: 30px;
+            width: 100%; padding: 18px; background: var(--twitch-purple); color: white;
+            border: none; border-radius: 14px; font-weight: 800; text-transform: uppercase;
+            cursor: pointer; letter-spacing: 1px; transition: 0.3s ease; margin-bottom: 30px;
         }
         .btn:hover { background: #772ce8; transform: translateY(-3px); box-shadow: 0 8px 20px var(--accent-glow); }
 
-        .platform-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px;
-            margin-top: 10px;
-            border-top: 1px solid #303032;
-            padding-top: 25px;
-        }
-
-        .social-btn {
-            background: #26262c;
-            padding: 12px;
-            border-radius: 12px;
-            color: var(--text-main);
-            text-decoration: none;
-            font-size: 0.8rem;
-            font-weight: 700;
-            border: 1px solid #3a3a3d;
-            transition: 0.2s;
-        }
+        .platform-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 10px; border-top: 1px solid #303032; padding-top: 25px; }
+        .social-btn { background: #26262c; padding: 12px; border-radius: 12px; color: var(--text-main); text-decoration: none; font-size: 0.8rem; font-weight: 700; border: 1px solid #3a3a3d; transition: 0.2s; }
         .social-btn:hover { background: var(--twitch-purple); border-color: var(--twitch-purple); transform: scale(1.03); }
-
         .footer-note { font-size: 0.85rem; color: var(--text-muted); margin-top: 35px; border-top: 1px solid #303032; padding-top: 25px; }
     </style>
 </head>
 <body>
+
     <div class="card-system">
         <div id="landing-page" class="glass-card">
             <div class="logo-placeholder">D</div>
             <h1>DACE</h1>
             <p class="tagline">Your friendly neighborhood streamer.<br>Swing into the web for updates.</p>
             
-            <form id="subscribe-form" onsubmit="handleJoin(event)">
-                <input type="email" placeholder="Your best email..." required>
-                <button type="submit" class="btn">Enter the Inbox</button>
+            <form id="newsletter-form">
+                <input type="email" name="email" id="email-input" placeholder="Your best email..." required>
+                <button type="submit" class="btn" id="submit-btn">Enter the Inbox</button>
             </form>
 
             <div class="platform-grid">
                 <a href="https://twitch.tv/dace3g" target="_blank" class="social-btn">🟣 TWITCH</a>
-                <a href="https://youtube.com/@dace3g?si=miRsz_5Lnr5YE_25" target="_blank" class="social-btn">🔴 MAIN YOUTUBE</a>
-                <a href="https://youtube.com/@dacelive2?si=ZLNn-oNhUOAYe-l6" target="_blank" class="social-btn">🎥 LIVE YOUTUBE</a>
-                <a href="https://www.instagram.com/dace3g?igsh=MWk1anpkNzMycmZiYQ%3D%3D&utm_source=qr" target="_blank" class="social-btn">📸 INSTAGRAM</a>
-                <a href="https://discord.gg/BgmQFQmVMR" target="_blank" class="social-btn" style="grid-column: span 2; background: #5865F2; border: none;">💬 JOIN DISCORD</a>
+                <a href="https://youtube.com/@dace3g" target="_blank" class="social-btn">🔴 MAIN YOUTUBE</a>
+                <a href="https://youtube.com/@dacelive2" target="_blank" class="social-btn">🎥 LIVE YOUTUBE</a>
+                <a href="https://www.instagram.com/dace3g" target="_blank" class="social-btn">📸 INSTAGRAM</a>
+                <a href="https://discord.gg/BgmQFQmVMR" target="_blank" class="social-btn" style="grid-column: span 2; background: #5865F2;">💬 JOIN DISCORD</a>
             </div>
         </div>
 
         <div id="welcome-page" class="glass-card">
             <span style="font-size: 3.5rem; display: block; margin-bottom: 10px;">🤟</span>
             <h2 style="font-size: 2.2rem; margin: 0; color: #fff;">Welcome, Legend.</h2>
-            <p class="tagline">You're officially in the inner circle. Keep an eye on your inbox for setup leaks and schedules.</p>
-            
-            <div class="footer-note">
-                Business: <strong>abegwhocookbusiness@gmail.com</strong>
-            </div>
+            <p class="tagline">You're officially in the inner circle. Your email has been saved to the list.</p>
+            <div class="footer-note">Business: <strong>abegwhocookbusiness@gmail.com</strong></div>
         </div>
     </div>
 
     <script>
-        function handleJoin(event) {
-            event.preventDefault();
-            const landing = document.getElementById('landing-page');
-            const welcome = document.getElementById('welcome-page');
+        const scriptURL = 'PASTE_YOUR_GOOGLE_SCRIPT_URL_HERE';
+        const form = document.getElementById('newsletter-form');
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            document.getElementById('submit-btn').innerHTML = "SAVING...";
             
-            landing.style.opacity = '0';
-            landing.style.transform = 'scale(0.95) translateY(-10px)';
-            
-            setTimeout(() => {
-                landing.style.display = 'none';
-                welcome.style.display = 'block';
-                setTimeout(() => {
-                    welcome.style.opacity = '1';
-                    welcome.style.transform = 'translateY(0)';
-                }, 50);
-            }, 500);
-        }
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => {
+                    const landing = document.getElementById('landing-page');
+                    const welcome = document.getElementById('welcome-page');
+                    landing.style.opacity = '0';
+                    setTimeout(() => {
+                        landing.style.display = 'none';
+                        welcome.style.display = 'block';
+                        setTimeout(() => { welcome.style.opacity = '1'; }, 50);
+                    }, 500);
+                })
+                .catch(error => console.error('Error!', error.message));
+        });
     </script>
 </body>
 </html>
