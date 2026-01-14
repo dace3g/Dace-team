@@ -140,9 +140,9 @@
             <p class="tagline">You're officially in the inner circle. Catch the vibe on my socials:</p>
             <div class="platform-grid">
                 <a href="https://twitch.tv/dace3g" target="_blank" class="social-btn">🟣 TWITCH</a>
-                <a href="https://youtube.com/@dace3g" target="_blank" class="social-btn">🔴 MAIN YT</a>
-                <a href="https://youtube.com/@dacelive2" target="_blank" class="social-btn">🎥 LIVE YT</a>
-                <a href="https://www.instagram.com/dace3g" target="_blank" class="social-btn">📸 INSTA</a>
+                <a href="https://youtube.com/@dace3g?si=miRsz_5Lnr5YE_25" target="_blank" class="social-btn">🔴 MAIN (YT)</a>
+                <a href="https://youtube.com/@dacelive2?si=ZLNn-oNhUOAYe-l6" target="_blank" class="social-btn">🎥 LIVE (YT)</a>
+                <a href="https://www.instagram.com/dace3g?igsh=MWk1anpkNzMycmZiYQ%3D%3D&utm_source=qr" target="_blank" class="social-btn">📸 INSTA</a>
                 <a href="https://discord.gg/BgmQFQmVMR" target="_blank" class="social-btn" style="grid-column: span 2; background: #5865F2; border: none;">💬 JOIN DISCORD</a>
             </div>
             <div class="footer-note">Business: <strong>abegwhocookbusiness@gmail.com</strong></div>
@@ -154,8 +154,11 @@
             event.preventDefault();
             const landing = document.getElementById('landing-page');
             const welcome = document.getElementById('welcome-page');
+            
+            // Animation sequence
             landing.style.opacity = '0';
             landing.style.transform = 'scale(0.95) translateY(-10px)';
+            
             setTimeout(() => {
                 landing.style.display = 'none';
                 welcome.style.display = 'block';
