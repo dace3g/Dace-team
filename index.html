@@ -46,7 +46,6 @@
             transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        /* Initial States */
         #landing-page { opacity: 1; transform: scale(1); }
         #welcome-page { 
             display: none; 
@@ -102,8 +101,6 @@
         }
         .btn:hover { background: #772ce8; transform: translateY(-3px); box-shadow: 0 8px 20px var(--accent-glow); }
 
-        .success-icon { font-size: 3.5rem; margin-bottom: 10px; display: block; }
-        
         .platform-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -122,35 +119,25 @@
             border: 1px solid #3a3a3d;
             transition: 0.2s;
         }
-        .social-btn:hover { background: var(--twitch-purple); border-color: var(--twitch-purple); transform: scale(1.03); }
-
+        .social-btn:hover { background: var(--twitch-purple); border-color: var(--twitch-purple); }
         .footer-note { font-size: 0.85rem; color: var(--text-muted); margin-top: 35px; border-top: 1px solid #303032; padding-top: 25px; }
-        .footer-note strong { color: var(--twitch-purple); }
     </style>
 </head>
 <body>
-
     <div class="card-system">
         <div id="landing-page" class="glass-card">
             <div class="logo-placeholder">D</div>
             <h1>DACE</h1>
             <p class="tagline">Your friendly neighborhood streamer.<br>Swing into the web for exclusive updates.</p>
-            
             <form id="subscribe-form" onsubmit="handleJoin(event)">
                 <input type="email" placeholder="Your best email..." required>
                 <button type="submit" class="btn">Enter the Inbox</button>
             </form>
-
-            <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 20px; letter-spacing: 0.5px;">
-                SCHEDULES • SETUP LEAKS • EARLY ACCESS
-            </p>
         </div>
 
         <div id="welcome-page" class="glass-card">
-            <span class="success-icon">🤟</span>
             <h2 style="font-size: 2.2rem; margin: 0; color: #fff;">Welcome, Legend.</h2>
             <p class="tagline">You're officially in the inner circle. Catch the vibe on my socials:</p>
-            
             <div class="platform-grid">
                 <a href="https://twitch.tv/dace3g" target="_blank" class="social-btn">🟣 TWITCH</a>
                 <a href="https://youtube.com/@dace3g" target="_blank" class="social-btn">🔴 MAIN YT</a>
@@ -158,31 +145,20 @@
                 <a href="https://www.instagram.com/dace3g" target="_blank" class="social-btn">📸 INSTA</a>
                 <a href="https://discord.gg/BgmQFQmVMR" target="_blank" class="social-btn" style="grid-column: span 2; background: #5865F2; border: none;">💬 JOIN DISCORD</a>
             </div>
-
-            <div class="footer-note">
-                Business Inquiries:<br><strong>abegwhocookbusiness@gmail.com</strong>
-            </div>
+            <div class="footer-note">Business: <strong>abegwhocookbusiness@gmail.com</strong></div>
         </div>
     </div>
 
     <script>
         function handleJoin(event) {
-            event.preventDefault(); // Prevents the page from reloading
-            
+            event.preventDefault();
             const landing = document.getElementById('landing-page');
             const welcome = document.getElementById('welcome-page');
-
-            // Start Smooth Transition
             landing.style.opacity = '0';
             landing.style.transform = 'scale(0.95) translateY(-10px)';
-            
             setTimeout(() => {
                 landing.style.display = 'none';
-                
-                // Set welcome display but keep it invisible for animation
                 welcome.style.display = 'block';
-                
-                // Small delay to trigger the CSS transition
                 setTimeout(() => {
                     welcome.style.opacity = '1';
                     welcome.style.transform = 'translateY(0)';
